@@ -1,6 +1,6 @@
 Magasin_SiteWeb
 ===============
-Gestion d’un panier d’achats Site Web utilisant PHP, MySQL, HTML, CSS et JavaScript.
+Gestion d’un panier d’achats Site Web utilisant PHP, MySQL, HTML, CSS et JavaScript. 
 Projet scolaire, équipe de 2 personnes, durée approx 20 jours à temps partiel.
 
 Spécifications
