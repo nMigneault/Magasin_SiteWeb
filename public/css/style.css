@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  
+  --font: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen,
+    ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial,
+    sans-serif;
+  --font2:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman,
+    serif;
+  font-size: 16px;
+  font-family: var(--font);
+}
+html {
+  height: 100%;
+}
+body {
+  --grey: #555555;
+  --white: #ffffff;
+  --blue: #434f61;
+  --border: #eeeeee;
+ 
+  position: relative;
+  min-height: 100%;
+  color: var(--grey);
+  background-color: var(--white);
+  margin: 0;
+  padding-bottom: 100px; /* Same height as footer */
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #394352;
+}
+.content-wrapper {
+  width: 1050px;
+  margin: 0 auto;
+}
+header {
+  border-bottom: 1px solid var(--border);
+}
+header .content-wrapper{
+  display: flex;
+}
+header h1 {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  font-size: 20px;
+  margin: 0;
+  padding: 24px 0;
+}
+header nav {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  justify-content: center;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--grey);
+  padding: 10px 10px;
+  margin: 0 10px;
+}
+header nav a:hover {
+  border-bottom: 1px solid #aaa;
+}
+header .link-icons {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+header .link-icons a {
+  text-decoration: none;
+  color: #394352;
+  padding: 0 10px;
+}
+header .link-icons a:hover {
+  color: #4e5c70;
+}
+header .link-icons a i {
+  font-size: 18px;
+}
+header .link-icons a span {
+  display: inline-block;
+  text-align: center;
+  background-color: #63748e;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 12px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+main .featured {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../imgs/Horticulture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main .featured h2 {
+  display: inline-block;
+  margin: 0;
+  width: 1050px;
+  font-family: var(--font);
+  font-size: 68px;
+  color: var(--white);
+  padding-bottom: 10px;
+}
+main .featured p {
+  display: inline-block;
+  margin: 0;
+  width: 1050px;
+  font-size: 24px;
+  color: var(--white);
+}
+main .recentlyadded h2 {
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+main .recentlyadded .products,
+main .products .products-wrapper,
+main .contact .content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 0 0;
+}
+main .recentlyadded .products .product,
+main .products .products-wrapper .product {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  width: 25%;
+  padding-bottom: 60px;
+}
+main .recentlyadded .products .product img,
+main .products .products-wrapper .product img {
+  transform: scale(1);
+  transition: transform 1s;
+}
+main .recentlyadded .products .product .name,
+main .products .products-wrapper .product .name {
+  display: block;
+  color: var(--grey);
+  padding: 20px 0 2px 0;
+}
+main .recentlyadded .products .product .price,
+main .products .products-wrapper .product .price {
+  display: block;
+  color: #999999;
+}
+main .recentlyadded .products .product:hover img,
+main .products .products-wrapper .product:hover img {
+  transform: scale(1.05);
+  transition: transform 1s;
+}
+main .recentlyadded .products .product:hover .name,
+main .products .products-wrapper .product:hover .name {
+  text-decoration: underline;
+}
+main > .product {
+  display: flex;
+  padding: 40px 0;
+}
+main > .product > div {
+  padding-left: 15px;
+}
+main > .product h1 {
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0;
+  padding: 20px 0 10px 0;
+}
+main > .product .price {
+  display: block;
+  font-size: 22px;
+  color: #999999;
+}
+main > .product form {
+  display: flex;
+  flex-flow: column;
+  margin: 40px 0;
+}
+main > .product form input[type="number"] {
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  color: var(--grey);
+  border-radius: 5px;
+}
+main > .product form input[type="submit"] {
+  background: #4e5c70;
+  border: 0;
+  color: var(--white);
+  width: 400px;
+  padding: 12px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main > .product form input[type="submit"]:hover {
+  background: var(--blue);
+}
+main > .products h1,
+main > .contact h1 {
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+main .panier h1,
+main .commander h1 {
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+main .panier table {
+  width: 100%;
+}
+main .panier table thead td {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+}
+main .panier table thead td:last-child {
+  text-align: right;
+}
+main .panier table tbody td {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+main .panier table tbody td:last-child {
+  text-align: right;
+}
+main .panier table .img {
+  width: 80px;
+}
+main .panier table .remove {
+  color: #777777;
+  font-size: 12px;
+  padding-top: 3px;
+}
+main .panier table .remove:hover {
+  text-decoration: underline;
+}
+main .panier table .price {
+  color: #999999;
+}
+main .panier table a {
+  text-decoration: none;
+  color: var(--grey);
+}
+main .panier table input[type="number"] {
+  width: 68px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: var(--grey);
+  border-radius: 5px;
+}
+main .panier .subtotal {
+  text-align: right;
+  padding: 40px 0;
+}
+main .panier .subtotal .text {
+  padding-right: 40px;
+  font-size: 18px;
+}
+main .panier .subtotal .price {
+  font-size: 18px;
+  color: #999999;
+}
+main > .products .buttons,
+main .panier .buttons,
+main .contact .buttons {
+  text-align: right;
+  padding-bottom: 40px;
+}
+main > .products .buttons a,
+main .panier .buttons input[type="submit"],
+main .contact .buttons input[type="submit"]{
+  margin-left: 5px;
+  padding: 12px 20px;
+  border: 0;
+  background: #4e5c70;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+main > .products .buttons a:hover,
+main .panier .buttons input[type="submit"]:hover,
+main .contact .buttons input[type="submit"]:hover  {
+  background: var(--blue);
+}
+
+main .commander p,
+main .contact p {
+  text-align: center;
+}
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  width: 100%;
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 0 0;
+}
+.colorChange{
+  --grey: BlueViolet;
+  --white: RoyalBlue;
+  --blue: white;
+  --border: DarkCyan;
+  --font: var(--font2);
+}
+.load{
+ --grey: #555555;
+ --white: #ffffff;
+ --blue: #434f61;
+ --border: #eeeeee;
+}
+
+#overlay {
+    display: none; /* Par défaut, on cache l'overlay */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Pour centrer l'image que l'overlay contiendra */
+    /* Ci-dessous, nous appliquons un background de couleur noire et d'opacité 0.6. Il s'agit d'une propriété CSS3. */
+    background-color: rgba(0,0,0,0.6);    
+}
+#overlay img {
+    margin-top: 100px;
+}
+
+#overlay img {
+    margin-top: 100px;
+}
+
