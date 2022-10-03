@@ -20,3 +20,7 @@ Description
 Le site Web est développé selon le cadre MVC (Modèle-Vue-Contrôleur), en utilisant la programmation orientée objet.
 Les vues sont écrites avec un gabarit de page. Ce gabarit contient un menu de navigation et un pied de page, qui 
 affiche la date du jour et la date de la dernière modification.
+
+Note
+----
+Un template CSS existant a été utilisé et retravaillé pour ce projet.
